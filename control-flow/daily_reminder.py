@@ -6,12 +6,12 @@ priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 # Start processing the reminder
-reminder = f"Reminder: {task} [Priority: {priority.capitalize()}]"
+reminder = f"[Priority: {priority.capitalize()}] Alert: '{task}'"
 
 # Match-case for priority
 match priority:
     case "high":
-        reminder += " - This is a top-priority task."
+        reminder += " - This is very important."
     case "medium":
         reminder += " - You should complete this task soon."
     case "low":
@@ -21,7 +21,7 @@ match priority:
 
 # Check if time-sensitive
 if time_bound == "yes":
-    reminder += " ⚠️ This task requires immediate attention today!"
+    reminder += " ⚠️ Kindly pay attention to this task today!"
 
 # Output the final reminder
 print("\n" + reminder)
